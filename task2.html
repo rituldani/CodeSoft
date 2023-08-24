@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RITUL</title>
+    <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+    <div class="main">
+        <div class="header-section">
+            <div class="header">
+                <div class="logo-space">
+                    <div class="logo">
+                        <img src="/personal-portfolio.png" alt="logo" height="60px", width="250px">
+                    </div>
+                </div>
+                <div class="nav">
+                    <button class="btn">Home</button>
+                    <button class="btn">About</button>
+                    <button class="btn">Achievements</button> <br> <br> 
+                    <button class="btn">Skills</button>
+                    <button class="btn">Contact</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-section">
+            <div class="home">
+                <div class="intro">
+                    <div class="blank"></div>
+                    <h1>Hello I'm</h1>
+                    <h2>Ritul Dani</h2>
+                    <h3>I Am a</h3>
+                    <div class="animator">
+                        <span id="dynamic" style="top: -33px;">
+                            <span class="dcontent"></span>
+                            <span class="dcontent">Maker</span>
+                            <span class="dcontent">Web Developer</span>
+                            <span class="dcontent">Coder</span>
+                            <span class="dcontent">Animator</span>
+                            <span class="dcontent">Problem Solver</span>
+                        </span>
+                        <script>
+                            var dyna = document.getElementById('dynamic');
+                            var every_line = document.getElementsByClassName('dcontent');
+                            var line_len = every_line.length;
+                            var dynac = 0;
+                            var c = 1;
+                            var heightRequired = 35;
+                            var f = 1;
+                            function changeLine(){
+                                if(f%c==0){
+                                    if(dynac < heightRequired){
+                                        dyna.style.top = (dynac)*-1 + 'px';
+                                        dynac++;
+                                        c = 1;
+                                    }
+                                    else{
+                                        c = 175;
+                                        if(line_len*35 == heightRequired){
+                                            dyna.style.top = '35px';
+                                            heightRequired = 0;
+                                            dynac = 0;
+                                            f=1;
+                                            c = 1;
+                                        }
+                                        heightRequired += 35;
+                                    }
+                                }
+                                f++;
+                                window.requestAnimationFrame(changeLine);
+                            }
+                            window.requestAnimationFrame(changeLine);
+                        </script>
+                    </div>
+                </div>
+                <div class="photo-sec">
+                    <div class="photo">
+                        <img src="/image-removebg-preview.png" alt="my-pic " , height="500px", width="500px">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="about-section">
+            <div class="about">
+                <div class="first">
+                    <div class="pic-space">
+                        <img class="pic" src="/who.png" alt="pic" height="400px", width="400px">
+                    </div>
+                </div>
+                <div class="second">
+                    <div class="content">
+                        <div class="me">About Me</div>
+                        <div class="text">
+                            Hello My name is Ritul
+                            <br>
+                            I'm from Chittorgarh, Rajasthan
+                            <br>
+                            I'm pursuing B.Tech CSE with AI/ML from
+                            <br>
+                            JECRC University - 3rd year
+                            <br>
+                            ----------------------------------------
+                            <br>
+                            Want to know More About ME?
+                            <br>
+                        </div>
+                        <div class="meet">
+                            <button class="contact-me">Contact Me</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="achieve-section">
+            <div class="heading">Achievements</div>
+            <div class="box1">
+                <div class="slider">
+                      <span id="slide-1"></span>
+                      <span id="slide-2"></span>
+                      <span id="slide-3"></span>
+                    <div class="image-container">
+                    <div class="slide" width="800" height="400">
+                        <img src="/image-removebg-preview.png" width="500" height="400" alt="1">
+                        <div class="space">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ratione provident nemo facilis quia perspiciatis accusantium quod veritatis temporibus sed esse accusamus dolores, quae ipsa totam cupiditate eveniet velit voluptate fugit obcaecati voluptates molestias dolorem aperiam corporis.
+                        </div>
+                    </div>
+                    <div class="slide" width="800" height="400">
+                        <img src="/personal-portfolio.png" width="500" height="400" alt="2">
+                        <div class="space">
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quo tempora facilis rem esse ratione placeat laboriosam vero libero hic. Adipisci modi facere, a corporis magni distinctio laboriosam eum nesciunt omnis asperiores magnam, consectetur reprehenderit! Eos fuga minus magnam placeat!
+                        
+                        </div>
+                    </div>
+                    <div class="slide" width="800" height="400">
+                        <img src="/who.png" width="500" height="400" alt="3">
+                        <div class="space">
+                           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate nobis nihil, ex distinctio illo iusto iste. Quasi vero molestiae excepturi harum ipsa labore perspiciatis aspernatur consectetur eum saepe, nulla nihil, voluptates, aut repellendus architecto officia illo facilis ipsum fugit cumque.
+                        </div>
+                    </div>
+                    </div>
+                    <div class="buttons">
+                        <a href="#slide-1"></a>
+                        <a href="#slide-2"></a>
+                        <a href="#slide-3"></a>
+                    </div>
+                </div>     
+            </div>
+        </div>
+
+        <div class="skill-section">
+                <div class="wrapper">
+                    <div class="first-wrap">
+                        <h5>Skills</h5>
+                        <div class="container">
+                            <div class="aiml">
+                                <img class="img" src="/aiml.jpg" alt="aiml" height="120px", width="120px">
+                                <h6>AIML enthu</h6>
+                            </div>
+                            <div class="printer">
+                                <img class="img" src="/3d.jpg" alt="3D" height="120px" , width="120px">
+                                <h6>3D Printing</h6>
+                            </div>
+                            <div class="web">
+                                <img class="img" src="/web.jpg" alt="web" height="120px" , width="120px">
+                                <h6>Web-D Beginner</h6>
+                            </div>
+                            <div class="com">
+                                <img class="img" src="/comm.jpeg" alt="com" height="120px" , width="120px">
+                                <h6>Commincation</h6>
+                            </div>
+                            <div class="team">
+                                <img class="img" src="/team.jpg" alt="team" height="120px" , width="120px">
+                                <h6>TeamWork</h6>
+                            </div>
+                            <div class="time">
+                                <img class="img" src="/time.jpeg" alt="time" height="120px" , width="120px"> 
+                                <h6>Time Management</h6>
+                            </div>   
+                        </div>                                                       
+                    </div>
+                    <div class="second-wrap">
+                        <h5>Tools</h5>
+                        <div class="container2">
+                            <div class="cura">
+                                <img class="png" src="/Cura.jpg" alt="cura" height="120px", width="120px">
+                                <h6>Ultimaker Cura</h6>
+                            </div>
+                            <div class="blender">
+                                <img class="png" src="/blender.jpeg" alt="blender" height="120px", width="120px">
+                                <h6>Blender</h6>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="third-wrap">
+                        <h5>Programming Languages</h5>
+                        <div class="pie-wrap">
+                            <div class="light-yellow entry">
+                                <p>50%</p>
+                                <p class="entry-value">JAVA</p>
+                            </div>
+                            
+                            <div class="sky-blue entry">
+                                <p>75%</p>
+                                <p class="entry-value">C++</p>
+                            </div>
+                            
+                            <div class="pink entry">
+                                <p>12.5%</p>
+                                <p class="entry-value">R</p>
+                            </div>
+                            
+                            <div class="purple entry">
+                                <p> 12.5%</p>
+                                <p class="entry-value">Statics</p>
+                            </div>
+                            
+                            <div class="green entry">
+                                <p> 12.5%</p>
+                                <p class="entry-value">SQL</p>
+                            </div>
+                            
+                            <div class="wheat entry">
+                                <p> 12.5%</p>
+                                <p class="entry-value">Python</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                        
+                </div>
+                    
+                
+                    
+        </div>
+
+        <div class="contact-section">
+            <div class="heading">Contact Me</div>
+            <div class="contact">
+                <div class="location">
+                    <img src="/loc.png" alt="loc">
+                    <div class="line1">Location</div>
+                    <div class="line2">Chittorgarh, Rajasthan</div>
+                </div>
+                <div class="email">
+                    <img src="/mail.png" alt="mail">
+                    <div class="line1">Email</div>
+                    <div class="line2">rituldani2003@gmail.com</div>
+                </div>
+                <div class="contact-no">
+                    <img src="/call.png" alt="calling">
+                    <div class="line1">Contact Number</div>
+                    <div class="line2">9461261816</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Copyright © 2019 Template Bundle. All rights reserved
+            <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+        </div>
+        </div>
+
+    </div>
+
+
+    <script src="/task2.js"></script>
+                  <script
+                    type="module"
+                    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+                  ></script>
+                  <script
+                    nomodule
+                    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+                  ></script>
+
+
+</body>
+</html>
